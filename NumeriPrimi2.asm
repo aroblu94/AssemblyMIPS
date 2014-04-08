@@ -16,8 +16,7 @@ main:
     syscall
     add $s0, $zero, $v0             # salvo N in $s0
     
-    addi $s1, $zero, 2              # a = 2
-    addi $s2, $zero, 2              # b = 2 
+    addi $s1, $zero, 2              # a = 2 
     
     li $v0, 4
     la $a0, str1
@@ -25,6 +24,7 @@ main:
     
 loopScorriNumeri1:
     beq $s1, $s0, end               # quando a = N termina
+    addi $s2, $zero, 2              # b = 2
     
 loopTrovaPrimo:   
     beq $s1, $s2, primo
